@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Wedding Banquets Near Me - Picaso Master Chef Banquets</title>
+  <meta name="description" content="Professional Best wedding banquets near me service. Picaso brings master chef expertise to your event." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blush: #F5E6DA;
+      --rose: #C17B6A;
+      --rose-deep: #9B4E3F;
+      --rose-light: #E8A898;
+      --sand: #EDE0D4;
+      --sand-dark: #C9B9A8;
+      --brown: #3D2314;
+      --brown-mid: #5C3825;
+      --white: #FFFAF6;
+      --text: #4A2E20;
+      --text-light: #7A5C4E;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--brown);
+      color: var(--rose-light);
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 95vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      background: var(--blush);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 60px 80px 72px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* petal pattern overlay */
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      right: -60px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(193,123,106,0.12) 0%, transparent 70%);
+      z-index: 0;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: slideIn 0.7s 0.2s forwards;
+    }
+    .eyebrow-line { width: 40px; height: 1px; background: var(--rose); }
+    .eyebrow span {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 400;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.18;
+      color: var(--brown);
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      animation: slideIn 0.8s 0.35s forwards;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--rose-deep);
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text-light);
+      margin: 20px 0 36px;
+      line-height: 1.7;
+      max-width: 400px;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      animation: slideIn 0.8s 0.5s forwards;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      animation: slideIn 0.7s 0.65s forwards;
+    }
+
+    .cta-primary {
+      display: inline-block;
+      padding: 15px 38px;
+      background: var(--rose-deep);
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .cta-primary:hover { background: var(--brown); transform: translateY(-2px); }
+
+    .cta-note {
+      font-size: 0.76rem;
+      color: var(--sand-dark);
+      letter-spacing: 0.05em;
+    }
+
+    /* right: decorative panel */
+    .hero-right {
+      background: var(--sand);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 30% 40%, rgba(193,123,106,0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 70% at 70% 60%, rgba(157,78,63,0.12) 0%, transparent 60%);
+    }
+    .decor-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(7rem, 14vw, 12rem);
+      font-style: italic;
+      color: rgba(193,123,106,0.13);
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+      line-height: 1;
+    }
+    .hero-badge {
+      position: absolute;
+      bottom: 48px;
+      right: 48px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--rose-deep);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      padding: 12px;
+      animation: spin 20s linear infinite;
+    }
+    .hero-badge strong { font-size: 1.3rem; font-family: 'Playfair Display', serif; }
+    .hero-badge span { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; }
+    .floral-svg {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      opacity: 0.35;
+    }
+
+    /* ── FEATURES STRIP ── */
+    .strip {
+      background: var(--brown);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    .strip-item {
+      flex: 1;
+      min-width: 180px;
+      padding: 28px 32px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+    .strip-item:last-child { border-right: none; }
+    .strip-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--rose-light);
+      display: block;
+    }
+    .strip-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* ── CONTENT SECTION ── */
+    .content {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 100px 24px 80px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+    .section-header h2 em { font-style: italic; color: var(--rose-deep); }
+    .section-header p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--blush);
+      padding: 44px 36px;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .card.visible { opacity: 1; transform: translateY(0); }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rose), var(--rose-deep));
+    }
+    .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      display: block;
+    }
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.85;
+    }
+
+    /* ── TESTIMONIAL ── */
+    .testimonial {
+      background: var(--sand);
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .testimonial blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--brown);
+      max-width: 680px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+      position: relative;
+    }
+    .testimonial blockquote::before {
+      content: '\201C';
+      font-size: 5rem;
+      color: var(--rose-light);
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      line-height: 1;
+      font-family: 'Playfair Display', serif;
+    }
+    .testimonial cite {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-style: normal;
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--rose-deep);
+      padding: 90px 24px;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .final-cta h2 em { font-style: italic; color: var(--rose-light); }
+    .final-cta p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      margin-bottom: 38px;
+      letter-spacing: 0.05em;
+    }
+    .cta-outline {
+      display: inline-block;
+      padding: 15px 46px;
+      border: 1.5px solid var(--white);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 400;
+      border-radius: 2px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .cta-outline:hover { background: var(--white); color: var(--rose-deep); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown);
+      padding: 56px 24px;
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--rose-light);
+      margin-bottom: 8px;
+    }
+    .footer-sub {
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 24px;
+    }
+    .footer-info {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.42);
+      line-height: 2.1;
+    }
+    .footer-info a { color: var(--rose-light); text-decoration: none; }
+    .footer-copy {
+      margin-top: 28px;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.08em;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 280px; }
+      .hero-left { padding: 60px 28px; }
+      .strip { flex-direction: column; }
+      .strip-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">Now serving Vadodara &amp; all nearby areas — Free consultation available</div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">
+        <span class="eyebrow-line"></span>
+        <span>Wedding Specialists · Vadodara</span>
+      </div>
+      <h1 class="hero-title">
+        <em>Best Wedding</em><br>Banquets<br>Near You
+      </h1>
+      <p class="hero-tagline">
+        by Picaso Master Chef — where every detail is a love letter to the couple.
+      </p>
+      <div class="cta-group">
+        <a href="#book" class="cta-primary">Book Your Wedding Banquet Today</a>
+        <span class="cta-note">✦ &nbsp;Available Dates Filling Fast for 2025–2026</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <svg class="floral-svg" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="80" cy="80" r="60" stroke="#C17B6A" stroke-width="1"/>
+        <circle cx="80" cy="80" r="40" stroke="#C17B6A" stroke-width="0.5"/>
+        <line x1="80" y1="20" x2="80" y2="140" stroke="#C17B6A" stroke-width="0.5"/>
+        <line x1="20" y1="80" x2="140" y2="80" stroke="#C17B6A" stroke-width="0.5"/>
+        <line x1="37" y1="37" x2="123" y2="123" stroke="#C17B6A" stroke-width="0.5"/>
+        <line x1="123" y1="37" x2="37" y2="123" stroke="#C17B6A" stroke-width="0.5"/>
+      </svg>
+      <div class="decor-text">I do</div>
+      <div class="hero-badge">
+        <strong>500+</strong>
+        <span>Weddings Hosted</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="strip">
+    <div class="strip-item">
+      <strong class="strip-num">500+</strong>
+      <span class="strip-label">Weddings Hosted</span>
+    </div>
+    <div class="strip-item">
+      <strong class="strip-num">15+</strong>
+      <span class="strip-label">Years Experience</span>
+    </div>
+    <div class="strip-item">
+      <strong class="strip-num">50+</strong>
+      <span class="strip-label">Master Chef Dishes</span>
+    </div>
+    <div class="strip-item">
+      <strong class="strip-num">4.9★</strong>
+      <span class="strip-label">Average Rating</span>
+    </div>
+  </div>
+
+  <!-- BODY CONTENT -->
+  <section class="content">
+    <div class="section-header">
+      <h2>Why Picaso is the <em>Best Wedding Banquet</em> Near You</h2>
+      <p>Families searching nearby discover that Picaso combines accessibility, artistry, and authentic master chef cuisine under one roof.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <span class="card-icon">💍</span>
+        <h3>Your Dream Wedding, Minutes Away</h3>
+        <p>
+          Searching for the best wedding banquet near you and worrying about long travel for your guests? Picaso Master Chef Banquets is conveniently located in the heart of Vadodara, easily accessible from all major localities — Alkapuri, Manjalpur, Gorwa, and beyond. We handle parking, shuttle coordination, and guest logistics so your family focuses entirely on the joy of the moment, not the commute. Proximity to your celebration shouldn't mean compromise on elegance.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">👨‍🍳</span>
+        <h3>Wedding Menus Crafted by Master Chefs</h3>
+        <p>
+          At most wedding banquets near you, food is an afterthought. At Picaso, it is the centrepiece. Our master chefs curate bespoke wedding menus tailored to your family's traditions, regional preferences, and dietary needs — from royal Gujarati saat-course thali and Punjabi live counters to Continental dinner setups and artisanal dessert bars. With live cooking stations, fresh ingredients, and presentation worthy of a five-star hotel, your guests will talk about the food for years after the wedding.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">✨</span>
+        <h3>End-to-End Wedding Planning, Stress-Free</h3>
+        <p>
+          Finding the best wedding banquet near you means finding a partner, not just a venue. Picaso offers dedicated wedding managers who coordinate every element — décor themes (floral, royal, rustic, modern), mandap setup, photography spots, sound and lighting design, mehendi space, and sangeet staging. We manage vendors, timelines, and last-minute surprises so you and your family can be fully present in every cherished moment. When it comes to weddings near Vadodara, no one handles the full picture better than Picaso.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <div class="testimonial">
+    <blockquote>
+      We searched everywhere for the best wedding banquet near us — and Picaso wasn't just close, it was perfect. The food, the décor, the warmth of their team made our day absolutely unforgettable.
+    </blockquote>
+    <cite>— Priya &amp; Rohan Mehta, Married at Picaso, February 2025</cite>
+  </div>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="book">
+    <h2>Your Perfect Wedding is <em>Closer Than You Think</em></h2>
+    <p>Reach out today and let our wedding specialists design your dream celebration</p>
+    <a href="tel:+919876543210" class="cta-outline">Book Your Wedding Banquet Near Me Today</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">Picaso Master Chef Banquets</div>
+    <div class="footer-sub">Wedding Specialists · Vadodara, Gujarat</div>
+    <div class="footer-info">
+      Plot No. 12, Alkapuri Society, Near Sayajibaug,<br>
+      Vadodara, Gujarat — 390 005, India<br>
+      <a href="tel:+919876543210">+91 98765 43210</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="mailto:weddings@picasobanquets.com">weddings@picasobanquets.com</a>
+    </div>
+    <div class="footer-copy">© 2025 Picaso Master Chef Banquets. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.card').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
